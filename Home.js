@@ -22,11 +22,15 @@ class Home extends React.Component {
           
           style={{
             height: 50,
-            width: '90%',
+            width: '50%',
             borderColor: 'black',
             borderWidth: 2,
             borderRadius: 20,
             paddingLeft: 10,
+            borderRightWidth: 5,
+            borderLeftWidth : 5,
+            
+            
           }}
         onChangeText={text => this.setState({text})}
                  
@@ -38,16 +42,20 @@ class Home extends React.Component {
           style={{
             height: 50,
             paddingLeft: 10,
-            width: '90%',
+            width: '50%',
             borderColor: 'black',
             
             borderWidth: 2,
             borderRadius: 20,
             marginTop: 10,
+            borderRightWidth: 5,
+            borderLeftWidth : 5,
           }}
           onChangeText={password => this.setState({password})}
         />
+        
       </View>
+     
     );
   }
   componentDidMount() {
@@ -63,10 +71,17 @@ class Home extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    //flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  child: {
+    backgroundColor : "#bcf29e",
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex:1,
+    width: "50%"
+  }
 });
 
 export default Home;
